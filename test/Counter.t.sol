@@ -12,17 +12,17 @@ contract CounterTest is Test {
     }
 
     function test_Increment() public {
-        counter.increment(); // Call increment
-        assertEq(counter.getCount(), 1); // Check if count is 1
+        counter.inc(); // Call increment
+        assertEq(counter.get(), 1); // Check if count is 1
     }
 
     function test_Decrement() public {
-        counter.increment(); // Set count to 1
-        counter.decrement(); // Call decrement
-        assertEq(counter.getCount(), 0); // Check if count is 0
+        counter.inc(); // Set count to 1
+        counter.dec(); // Call decrement
+        assertEq(counter.get(), 0); // Check if count is 0
     }
 
     function testFail_DecrementUnderflow() public {
-        counter.decrement(); // Should fail (count is 0)
+        counter.dec(); // Should fail (count is 0)
     }
 }

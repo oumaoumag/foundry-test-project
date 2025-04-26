@@ -6,4 +6,4 @@ evm_version = "paris"
 solc_version = "0.8.20"
 
 [rpc_endpoints]
-lisk_sepolia = "${https://rpc.sepolia-api.lisk.com}"
+lisk_sepolia = "https://rpc.sepolia-api.lisk.com"

@@ -1,1 +1,33 @@
+# Environment variables
 .env
+
+# Compiler files
+cache/
+out/
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Dependency directories
+node_modules/
+
+# Debug files
+*.log
+
+# Coverage directory
+coverage/
+coverage.json
+
+# Hardhat files
+artifacts/
+cache_hardhat/
+
+# Foundry
+forge-cache/
+broadcast/
+
+# Operating System files
+.DS_Store

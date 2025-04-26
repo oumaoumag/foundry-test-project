@@ -1,18 +1,28 @@
-//SPDX-License-Identifier: MIT
+// SPDX-License-Identifier: MIT
 pragma solidity ^0.8.20;
 
 contract Counter {
-    uint256 public count; // Stores the count (start at 0)
+    uint256 public count;
 
-    function increment() external {
-        count += 1;   // Increase count by 1
+    // Function to get the current count
+    function get() public view returns (uint256) {
+        return count;
     }
 
-    function decrement() external {
-        count -= 1;   // Decrease count by 1
+    // Function to increment count by 1
+    function inc() public {
+        count += 1;
     }
 
-    function getCount() external view returns (uint256) {
-        return count; // Return current count
+    // Function to decrement count by 1
+    function dec() public {
+        // Prevent underflow
+        require(count > 0, "Counter: cannot decrement below zero");
+        count -= 1;
+    }
+
+    // Function to reset count to zero
+    function reset() public {
+        count = 0;
     }
 }
